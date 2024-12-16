@@ -10,10 +10,10 @@
 	<h1>Vamsi</h1>
 	<nav>
 		<ul>
-			<li>Products</li>
-			<li>Orders</li>
-			<li>AboutUs</li>
-			<li>ContactUs</li>
+			<li><a href="#">Products</a></li>
+			<li><a href="#">Orders</a></li>
+			<li><a href="#">Aboutus</a></li>
+			<li><a href="#">ContactUs</a></li>
 		</ul>
 	</nav>
 	<table>
