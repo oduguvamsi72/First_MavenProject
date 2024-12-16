@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,8 +7,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Vamsi</h1>
-<table>
+	<h1>Vamsi</h1>
+	<nav>
+		<ul>
+			<li>Products</li>
+			<li>Orders</li>
+			<li>AboutUs</li>
+			<li>ContactUs</li>
+		</ul>
+	</nav>
+	<table>
 		<thead>
 			<tr>
 				<th>Name</th>
