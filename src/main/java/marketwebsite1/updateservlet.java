@@ -14,16 +14,20 @@ import javax.servlet.http.HttpServletResponse;
 public class updateservlet extends HttpServlet{
 @Override
 protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	String username= req.getParameter("username");
-	String email= req.getParameter("email");
+	String password= req.getParameter("password");
+	String Npassword= req.getParameter("newpassword");
+	String CNpassword= req.getParameter("confirmnewpassword");
+
 	try {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/swiggy","root","root");
 		
-		String sql="update register set email=? where username=?";
+		String sql="update register set password=?,password=? where password=?";
 		PreparedStatement pmst=conn.prepareStatement(sql);
-		pmst.setString(1, email);
-		pmst.setString(2, username);
+		pmst.setString(1, Npassword);
+		pmst.setString(2, CNpassword);
+		pmst.setString(3, password);
+
 		int i=pmst.executeUpdate();
 		if(i>0) {
 			resp.sendRedirect("welcome.jsp");

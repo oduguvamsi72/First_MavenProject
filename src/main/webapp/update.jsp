@@ -8,9 +8,10 @@
 </head>
 <body>
 <form action="update" method="post">
-		<input type="text" name="username" placeholder="Enter Username"><br>
-        <input type="email" name="email" placeholder="Enter email"><br>
-		<button type="submit">Submit</button>
+		<input type="password" name="password" placeholder="Current Password"><br>
+		<input type="password" name="newpassword" placeholder="New Password"><br>
+		<input type="password" name="confirmnewpassword" placeholder="Confirm New Password"><br>
+		<button type="submit">Update Password</button>
 	</form>
 </body>
 </html>
