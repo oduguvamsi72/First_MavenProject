@@ -9,5 +9,21 @@
 </head>
 <body>
 <h1>Welcome</h1>
+<table>
+    <thead>
+        <tr>
+            <th>username</th>
+            <th>email</th>
+            <th>password</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>vamsi</td>
+            <td>v@gmail.com</td>
+            <td>*****</td>
+        </tr>
+    </tbody>
+</table>
 </body>
 </html>
