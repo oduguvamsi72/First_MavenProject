@@ -12,36 +12,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<table>
-		<thead>
-			<tr>
-				<th>username</th>
-				<th>email</th>
-				<th>password</th>
-			</tr>
-		</thead>
-		<tbody>
-			<%
-			try {
-				Class.forName("com.mysql.cj.jdbc.Driver");
-				Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/swiggy", "root", "root");
-				String sql = "select * from register";
-				PreparedStatement pmst = conn.prepareStatement(sql);
-				ResultSet rs = pmst.executeQuery();
-				while (rs.next()) {
-			%>
-			<tr>
-				<td><%=rs.getString("username")%></td>
-				<td><%=rs.getString("email")%></td>
-				<td><%=rs.getString("password")%></td>
-			</tr>
-			<%
-			}
-			} catch (Exception e) {
-			e.printStackTrace();
-			}
-			%>
-		</tbody>
-	</table>
+	<form action="login" method="post">
+		<input type="email" name="email" placeholder="Email"><br>
+		<input type="password" name="newpassword" placeholder="Password"><br>
+		<button type="submit">Login</button>
+	</form>
 </body>
 </html>
